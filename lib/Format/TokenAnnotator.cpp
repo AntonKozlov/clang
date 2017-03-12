@@ -1986,7 +1986,7 @@ unsigned TokenAnnotator::splitPenalty(const AnnotatedLine &Line,
     return 100;
   if (Left.opensScope()) {
     if (Style.AlignAfterOpenBracket == FormatStyle::BAS_DontAlign)
-      return 0;
+      return 1;
     return Left.ParameterCount > 1 ? Style.PenaltyBreakBeforeFirstCallParameter
                                    : 19;
   }
